@@ -1,0 +1,118 @@
+:root { /* corresponde ao elemento raiz */
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* define como a largura e a altura totais de um elemento são calculadas */
+}
+
+/*Elementos base*/
+body {
+    background: var(--preto);
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+}
+header .container {
+    display: flex; /* define se um elemento é tratado como bloco ou elemento embutido e o layout usado para seus filhos, como flow layout , grid ou flex */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color:#AAA;
+    margin-right:10px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+/*filme principal */
+.principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0, .50), rgba(0,0,0, .50) 100%), url('/img/vikings-logo.jpg');
+
+    height: 400px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.principal .sinopse {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    
+}
+
+.title {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button {
+    background-color: rgba(0,0,0,.50);
+    border: none; /* define a borda de um elemento. */
+    color: white;
+
+    padding: 15px; /* ditância entre o conteúdo e suas bordas*/
+    margin-right: 15px;
+
+    cursor: pointer; /*mãozinha sobre o botão*/
+    transition: .4s ease all; /*tempo entre original e o hover*/
+}
+
+.button:hover {
+    background-color: white;
+    color:black;
+}
+
+.button i{ /* através do site Font Awesome*/
+    margin-right: 10px;
+}
+
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.principal .container {
+    width: 70%; /* define a largura de um elemento, neste caso info escrita não ocupa toda tela */
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block; 
+}
+
+.carousel {
+    margin:10px;
+}
+
+.item {
+    transition: all 0.5s ease; 
+    filter: brightness(50%) blur(0.5px);
+    padding: 5px;    
+  }
+
+.item:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1); 
+    filter: brightness(100%) blur(0.5px);
+    
+}
